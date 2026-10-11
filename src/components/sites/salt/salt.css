@@ -1,0 +1,1185 @@
+/* ============================================================
+   Salt Productions — passthesalt.com clone styles
+   Extracted from the source theme (main.css) and hand-rewritten
+   for editability. Scoped entirely under `.salt-app`.
+   ============================================================ */
+
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-regularitalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-mediumitalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Good Sans";
+  src: url("/sites/salt/fonts/goodsans-bolditalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Integral";
+  src: url("/sites/salt/fonts/integral-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Integral";
+  src: url("/sites/salt/fonts/integral-demibold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Integral";
+  src: url("/sites/salt/fonts/integral-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.salt-app {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-eggshell: #fdfaf1;
+  --color-plum: #5d0f3e;
+  --color-pink: #ff99ad;
+  --color-light-pink: #ebccdf;
+  --color-midnight: #15171a;
+  --color-slate: #15171a;
+  --color-mist: #a3e1ea;
+  --color-mist-tint: #dcffff;
+  --color-beige: #e2d7ce;
+  --color-cream: #fdfaf1;
+  --color-coral: #ff5643;
+  --color-steel: #323a40;
+
+  --container-padding: 60px;
+  --section-gap: 75px;
+  --header-height: 78px;
+  --header-height-hero: 79px;
+  --hero-square-height: calc(100lvh - var(--header-height-hero) * 2);
+
+  position: relative;
+  min-height: 100vh;
+  background: var(--color-eggshell);
+  color: var(--color-midnight);
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.salt-app *,
+.salt-app *::before,
+.salt-app *::after {
+  box-sizing: border-box;
+}
+
+.salt-app a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.salt-app img,
+.salt-app video {
+  display: block;
+  max-width: 100%;
+}
+
+.salt-app ::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* ---------- containers ---------- */
+.salt-app .s-container,
+.salt-app .s-container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+.salt-app .s-container {
+  width: 100%;
+  max-width: 1800px;
+}
+
+/* ---------- typography ---------- */
+.salt-app .t-h1 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(31px, 6vw, 90px);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  color: var(--color-midnight);
+}
+.salt-app .t-h2 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 70px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--color-midnight);
+}
+.salt-app .t-h3 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vw, 45px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--color-midnight);
+}
+.salt-app .t-h4 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+.salt-app .t-section-header {
+  border-top: 1px solid currentColor;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.salt-app .t-lg { font-family: "Good Sans", Arial, sans-serif; font-size: 35px; line-height: 1.2; }
+.salt-app .t-md { font-family: "Good Sans", Arial, sans-serif; font-size: 25px; line-height: 1.2; }
+.salt-app .t-body { font-family: "Good Sans", Arial, sans-serif; font-size: 15px; line-height: 1.5; }
+.salt-app .t-sm { font-family: "Good Sans", Arial, sans-serif; font-size: 13px; line-height: 1.5; }
+
+.salt-app .grid-blk {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 10px;
+  row-gap: 30px;
+}
+.salt-app .col-span-all {
+  grid-column: 1 / -1;
+}
+.salt-app .center-all {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+.salt-app .section-title {
+  margin-bottom: 30px;
+}
+.salt-app .emphasis {
+  -webkit-text-size-adjust: none;
+}
+
+/* ---------- sections ---------- */
+.salt-app main section {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+.salt-app main section.hero-row {
+  padding-bottom: var(--section-gap);
+}
+.salt-app main section.work-row {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ---------- header ---------- */
+.salt-app .site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  background: var(--bg-color, var(--color-eggshell));
+  color: var(--type-color, var(--color-midnight));
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+.salt-app .site-header.is-black {
+  --bg-color: var(--color-black);
+  --type-color: var(--color-eggshell);
+}
+.salt-app .site-header-inner {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.salt-app .site-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  transition: opacity 1s ease;
+}
+.salt-app .site-logo a {
+  max-width: 70px;
+  display: block;
+}
+.salt-app .site-logo h1 {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.salt-app .logo-in-place .site-logo h1,
+.salt-app .nav-open .site-logo h1,
+.salt-app .no-hero .site-logo h1 {
+  opacity: 1;
+}
+.salt-app .svg-fill {
+  display: flex;
+  align-items: center;
+}
+.salt-app .svg-fill svg {
+  width: 100%;
+}
+
+/* burger */
+.salt-app .burger {
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+.salt-app .burger .burger-lines {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.salt-app .burger .burger-lines span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease;
+}
+.salt-app .burger .burger-lines span.line-2 {
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  transform: translate(-50%, -50%);
+}
+.salt-app .nav-open .burger .burger-lines {
+  transform: rotate(45deg);
+}
+
+/* slide-out nav panel */
+.salt-app .nav-panel {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  max-width: 400px;
+  height: calc(100dvh - var(--header-height));
+  background: var(--color-eggshell);
+  color: var(--color-midnight);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+.salt-app .nav-open .nav-panel {
+  transform: translateX(0);
+}
+.salt-app .nav-panel .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.salt-app .nav-panel .nav-list a {
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+}
+.salt-app .nav-panel .nav-contact h4 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.salt-app .nav-panel .nav-panel-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 var(--container-padding);
+}
+.salt-app .nav-panel .nav-panel-foot {
+  margin-top: auto;
+}
+.salt-app .nav-panel .nav-panel-foot .nav-contact {
+  margin-bottom: 30px;
+}
+.salt-app .nav-panel .nav-contact a {
+  font-size: 15px;
+}
+.salt-app .nav-panel .nav-social .icon {
+  display: block;
+  width: 36px;
+}
+.salt-app .nav-panel .nav-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.salt-app .nav-panel .nav-social .icon {
+  width: 36px;
+}
+
+/* ---------- hero ---------- */
+.salt-app .hero-row {
+  position: relative;
+}
+.salt-app .hero-row--top {
+  margin-top: calc(-1 * (var(--header-height-hero) + var(--section-gap)));
+  z-index: 11;
+}
+.salt-app .hero-scroll {
+  position: relative;
+  height: 200lvh;
+}
+.salt-app .hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100lvh;
+  overflow: hidden;
+}
+.salt-app .hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.salt-app .hero-pin {
+  width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+}
+.salt-app .hero-pin-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.salt-app .hero-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.salt-app .hero-media-point {
+  position: absolute;
+  top: var(--header-height-hero);
+  left: 0;
+  width: 100%;
+  height: var(--hero-square-height);
+}
+.salt-app .hero-anim-layer {
+  position: absolute;
+  top: calc((100lvh - var(--hero-square-height)) / 2);
+  left: 50%;
+  width: var(--hero-square-height);
+  height: var(--hero-square-height);
+  overflow: hidden;
+  transform: translateX(-50%);
+  will-change: top, width;
+  pointer-events: none;
+}
+.salt-app .hero-anim-layer .hero-video-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.salt-app .hero-video {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.salt-app .hero-video video,
+.salt-app .hero-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.salt-app .hero-obscure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(var(--header-height-hero) + var(--hero-square-height)),
+    0 calc(var(--header-height-hero) + var(--hero-square-height))
+  );
+}
+.salt-app .hero-logo-layer {
+  position: absolute;
+  top: calc(100lvh - (100lvh - var(--hero-square-height)) / 2);
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  will-change: transform, top;
+}
+.salt-app .hero-logo-layer .hero-logo-mark {
+  width: calc(var(--hero-square-height) * 0.9);
+}
+.salt-app .hero-logo-mark svg {
+  display: block;
+  width: 100%;
+}
+.salt-app .hero-logo-mark svg path {
+  fill: var(--color-eggshell);
+}
+
+.salt-app .hero-text-row {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 1800px;
+  margin: 0 auto;
+  right: 0;
+  z-index: 12;
+  pointer-events: none;
+  top: calc(100% + 100px);
+  will-change: top;
+}
+.salt-app .hero-text-row .t-h1 {
+  white-space: nowrap;
+  line-height: 0.9;
+}
+.salt-app .hero-text-outer {
+  z-index: 12;
+}
+.salt-app .hero-text-outer .t-h1 {
+  color: #350016;
+}
+.salt-app .hero-text-inner {
+  z-index: 15;
+}
+.salt-app .hero-text-inner .t-h1 {
+  color: var(--color-eggshell);
+}
+.salt-app .hero-text-inner {
+  pointer-events: none;
+}
+
+.salt-app .hero-intro {
+  margin-top: 0;
+  position: relative;
+  z-index: 200;
+  overflow: hidden;
+}
+.salt-app .hero-intro-overlap {
+  margin-top: -20vh;
+}
+.salt-app .hero-intro .hero-col {
+  grid-column: span 12 / span 12;
+}
+.salt-app .hero-intro p {
+  margin: 0 0 20px;
+}
+.salt-app .animated-words {
+  position: relative;
+  margin: 25px 0;
+  overflow: hidden;
+}
+.salt-app .animated-words-track {
+  display: flex;
+  align-items: baseline;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.salt-app .animated-words .word {
+  flex: 0 0 auto;
+  margin-right: 40px;
+  white-space: nowrap;
+  opacity: 0.33;
+  color: #c4c4c4;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.salt-app .animated-words .word.active {
+  opacity: 1;
+  color: #350016;
+}
+.salt-app .hero-intro-grid {
+  margin-top: 100px;
+}
+
+/* buttons */
+.salt-app .btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(21 23 26);
+  border-radius: 30px;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-midnight);
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  font-family: "Good Sans", Arial, sans-serif;
+}
+.salt-app .btn-pill:hover {
+  background: rgb(21 23 26);
+  color: #ffffff;
+}
+.salt-app .btn-pill-solid {
+  border: 1px solid rgb(21 23 26);
+  border-radius: 30px;
+  padding: 10px 100px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ffffff;
+  background: rgb(21 23 26);
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  font-family: "Good Sans", Arial, sans-serif;
+}
+.salt-app .btn-pill-solid:hover {
+  background: transparent;
+  color: rgb(21 23 26);
+}
+
+/* ---------- media ---------- */
+.salt-app .media {
+  position: relative;
+  overflow: hidden;
+}
+.salt-app .media--cover img,
+.salt-app .media--cover video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- featured work ---------- */
+.salt-app .work-row {
+  background: var(--color-beige);
+  color: var(--color-midnight);
+  overflow: hidden;
+}
+.salt-app .work-carousel {
+  margin-left: calc(var(--container-padding) * -1);
+  margin-right: calc(var(--container-padding) * -1);
+  position: relative;
+}
+.salt-app .work-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.salt-app .work-track::-webkit-scrollbar {
+  display: none;
+}
+.salt-app .work-slide {
+  flex: 0 0 auto;
+  width: calc(50% - 12px);
+  scroll-snap-align: center;
+}
+.salt-app .work-hover-zone-wrap {
+  display: none;
+}
+.salt-app .work-see-all {
+  margin-top: 50px;
+}
+.salt-app .work-hover-zone {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 25%;
+  top: 0;
+  opacity: 0;
+}
+.salt-app .work-hover-zone.prev {
+  left: 0;
+}
+.salt-app .work-hover-zone.next {
+  right: 0;
+}
+.salt-app .work-card {
+  position: relative;
+}
+.salt-app .work-card .work-image {
+  background: var(--color-mist);
+}
+.salt-app .work-card .screen-link {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+.salt-app .work-card .work-title {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.salt-app .work-card:hover .work-title {
+  opacity: 1;
+}
+.salt-app .work-card .work-title .title-box {
+  width: calc(66.6666667% - 20px);
+  margin: 0 auto;
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+.salt-app .work-card:hover .pixel-grid {
+  opacity: 1;
+}
+.salt-app .pixel-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.salt-app .pixel-grid .cell {
+  background: transparent;
+}
+.salt-app .pixel-grid .cell:nth-child(14),
+.salt-app .pixel-grid .cell:nth-child(15),
+.salt-app .pixel-grid .cell:nth-child(16),
+.salt-app .pixel-grid .cell:nth-child(17),
+.salt-app .pixel-grid .cell:nth-child(20),
+.salt-app .pixel-grid .cell:nth-child(21),
+.salt-app .pixel-grid .cell:nth-child(22),
+.salt-app .pixel-grid .cell:nth-child(23) {
+  background: var(--color-beige);
+}
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(3),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(4),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(6),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(9),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(11),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(12),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(19),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(26),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(28),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(30),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(33),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(34),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(35),
+.salt-app .pixel-grid.animate-style-1 .cell:nth-child(36) {
+  background: var(--color-beige);
+}
+
+/* ---------- awards ---------- */
+.salt-app .awards-row {
+  color: var(--color-midnight);
+}
+.salt-app .awards-intro {
+  grid-column: 1 / -1;
+}
+.salt-app .marquee {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+}
+.salt-app .marquee-text {
+  position: relative;
+  overflow: hidden;
+  --move-speed: 70s;
+}
+.salt-app .marquee-track {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  animation: salt-marquee var(--move-speed, 20s) linear infinite;
+  will-change: transform;
+}
+.salt-app .award-item {
+  position: relative;
+  min-width: 120px;
+  width: 120px;
+  height: 100%;
+  max-width: 120px;
+  overflow: hidden;
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.salt-app .award-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  text-align: center;
+}
+.salt-app .award-medal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.salt-app .award-medal .medal-cir {
+  width: 60px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0.5rem;
+}
+.salt-app .award-medal .medal-cir svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.salt-app .award-grade {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.salt-app .award-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  max-width: 120px;
+  max-height: 48px;
+}
+.salt-app .award-logo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.salt-app .award-title {
+  font-size: 10px;
+  white-space: normal;
+  line-height: 1.4;
+  margin-top: 25px;
+}
+
+@keyframes salt-marquee {
+  from {
+    transform: translate3d(-25%, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ---------- press ---------- */
+.salt-app .press-row {
+  color: var(--color-midnight);
+}
+.salt-app .press-slider {
+  position: relative;
+}
+.salt-app .press-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.salt-app .press-track::-webkit-scrollbar {
+  display: none;
+}
+.salt-app .press-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-bottom: 40px;
+  scroll-snap-align: start;
+}
+.salt-app .press-card {
+  border-radius: 20px;
+  box-shadow: 7px 6px 24px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background: #ffffff;
+}
+.salt-app .press-card blockquote {
+  margin: 0;
+}
+.salt-app .press-quote {
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--color-midnight);
+}
+.salt-app .press-quote-attr {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  font-weight: 700;
+}
+.salt-app .press-nav {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding-bottom: 40px;
+}
+.salt-app .press-nav button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-midnight);
+  font-size: 35px;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+}
+.salt-app .press-nav button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.salt-app .press-nav svg {
+  display: block;
+}
+
+/* ---------- footer ---------- */
+.salt-app .site-footer {
+  background: var(--color-midnight);
+  color: var(--color-cream);
+  margin-top: auto;
+}
+.salt-app .footer-marquee {
+  background: var(--color-steel);
+  color: #fdfaf1;
+  padding-top: 28px;
+  padding-bottom: 30px;
+  margin-bottom: 75px;
+  position: relative;
+}
+.salt-app .footer-marquee .marquee-text {
+  --move-speed: 25s;
+}
+.salt-app .footer-marquee .f-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.salt-app .footer-marquee .f-item .t-h4 {
+  color: var(--wwu-text-color, #fdfaf1);
+}
+.salt-app .footer-marquee .f-divider {
+  width: 17px;
+  height: 17px;
+  background: var(--wwu-divider-color, #000000);
+  margin-left: 28px;
+  margin-right: 28px;
+  position: relative;
+  top: -2px;
+  flex: 0 0 auto;
+}
+.salt-app .footer-marquee .screen-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.salt-app .footer-legal p {
+  margin: 0;
+}
+.salt-app .footer-col h4 {
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+.salt-app .footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-transform: uppercase;
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.salt-app .footer-legal {
+  border-top: 1px solid rgb(255 255 255 / 0.2);
+  padding-top: 18px;
+  padding-bottom: 56px;
+  margin-top: 75px;
+}
+.salt-app .footer-pinch {
+  font-family: "Good Sans", Arial, sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.salt-app .footer-pinch .pinch-wrap {
+  width: 85px;
+  height: 18px;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+}
+.salt-app .footer-pinch .pinch-wrap svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.salt-app .footer-pinch .pinch-wrap .screen-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* ---------- section rhythm + shared row helpers ---------- */
+.salt-app .work-row,
+.salt-app .awards-row,
+.salt-app .press-row {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+.salt-app .press-media {
+  grid-column: 1 / -1;
+}
+.salt-app .press-body {
+  grid-column: 1 / -1;
+}
+.salt-app .press-inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 10px;
+  row-gap: 30px;
+}
+.salt-app .press-body blockquote {
+  margin: 0;
+}
+.salt-app .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+.salt-app .footer-logo-col {
+  grid-column: 1 / -1;
+}
+.salt-app .footer-logo-col a {
+  display: block;
+  width: 295px;
+  max-width: 100%;
+  margin: 0 auto 50px;
+}
+.salt-app .footer-logo-col .footer-logo {
+  display: flex;
+  align-items: center;
+}
+.salt-app .footer-logo-col .footer-logo svg {
+  display: block;
+  width: 100%;
+}
+.salt-app .footer-logo-col .footer-logo svg path {
+  fill: var(--color-steel);
+}
+.salt-app .footer-col {
+  grid-column: span 6 / span 6;
+}
+.salt-app .footer-head {
+  margin: 0 0 25px;
+  text-transform: uppercase;
+  font-family: "Integral", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-cream);
+}
+.salt-app .footer-pinch-col {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 767px) {
+  .salt-app {
+    --container-padding: 30px;
+    --hero-square-height: calc(70lvh - var(--header-height-hero) * 2);
+    --section-gap: 25px;
+  }
+  .salt-app .grid-blk {
+    row-gap: 30px;
+  }
+  .salt-app .hero-intro .hero-col {
+    grid-column: 1 / -1;
+  }
+  .salt-app .hero-intro .hero-col-spaced {
+    grid-column: 1 / -1;
+  }
+  .salt-app .work-slide {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 500px) {
+  .salt-app {
+    --container-padding: 20px;
+    --hero-square-height: 300px;
+  }
+  .salt-app .press-card {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .salt-app .grid-blk {
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+  .salt-app .nav-panel {
+    display: none;
+  }
+  .salt-app .work-hover-zone-wrap {
+    display: block;
+  }
+  .salt-app .awards-intro {
+    grid-column: span 5 / span 5;
+  }
+  .salt-app .hero-intro .hero-col {
+    grid-column: span 6 / span 6;
+    grid-column-start: 6;
+  }
+  .salt-app .hero-intro .hero-col-spaced {
+    grid-column: span 6 / span 6;
+    grid-column-start: 6;
+  }
+  .salt-app .work-slide {
+    width: calc(50% - 15px);
+  }
+  .salt-app .press-slide {
+    width: 100%;
+  }
+  .salt-app .press-inner {
+    column-gap: 30px;
+  }
+  .salt-app .press-media {
+    grid-column: span 6 / span 6;
+  }
+  .salt-app .press-body {
+    grid-column: span 6 / span 6;
+    grid-column-start: 7;
+  }
+  .salt-app .press-quote {
+    font-size: 25px;
+  }
+  .salt-app .footer-col {
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .salt-app .hero-intro-overlap {
+    margin-top: 0;
+  }
+  .salt-app .footer-logo-col {
+    grid-column: span 6 / span 6;
+    grid-row: span 2 / span 2;
+  }
+  .salt-app .footer-logo-col a {
+    margin: 0;
+  }
+  .salt-app .footer-col {
+    grid-column: span 2 / span 2;
+  }
+  .salt-app .footer-pinch-col {
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .salt-app .work-slide {
+    width: calc(40% - 18px);
+  }
+  .salt-app .press-slide {
+    width: 86%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salt-app .marquee-track {
+    animation-duration: 200s;
+  }
+}
